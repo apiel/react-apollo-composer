@@ -10,6 +10,10 @@
 npm install --save react-apollo-composer
 ```
 
+```bash
+yarn add react-apollo-composer --save
+```
+
 ## Usage
 
 ```jsx
