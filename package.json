@@ -1,6 +1,6 @@
 {
   "name": "react-apollo-composer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react apollo composer for queries and mutations",
   "author": "Alexandre Piel",
   "license": "MIT",

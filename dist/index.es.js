@@ -1,5 +1,5 @@
 import React__default, { Component } from 'react';
-import { object, func, node, string, bool, number, oneOfType, arrayOf } from 'prop-types';
+import PropTypes__default, { object, func, node, string, bool, number, oneOfType, arrayOf } from 'prop-types';
 import { ApolloError } from 'apollo-client';
 import 'react-dom/server';
 
@@ -1009,7 +1009,7 @@ var ReactApolloCompose = function (_React$Component) {
 }(React__default.Component);
 
 ReactApolloCompose.propTypes = {
-    queries: PropTypes.object.isRequired
+    queries: PropTypes__default.object.isRequired
 };
 
 export default ReactApolloCompose;

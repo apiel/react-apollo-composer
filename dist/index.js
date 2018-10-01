@@ -6,7 +6,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-var PropTypes$1 = require('prop-types');
+var PropTypes = require('prop-types');
+var PropTypes__default = _interopDefault(PropTypes);
 var apolloClient = require('apollo-client');
 require('react-dom/server');
 
@@ -16,10 +17,10 @@ var ApolloConsumer = function (props, context) {
     return props.children(context.client);
 };
 ApolloConsumer.contextTypes = {
-    client: PropTypes$1.object.isRequired,
+    client: PropTypes.object.isRequired,
 };
 ApolloConsumer.propTypes = {
-    children: PropTypes$1.func.isRequired,
+    children: PropTypes.func.isRequired,
 };
 
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -58,12 +59,12 @@ var ApolloProvider = (function (_super) {
         return this.props.children;
     };
     ApolloProvider.propTypes = {
-        client: PropTypes$1.object.isRequired,
-        children: PropTypes$1.node.isRequired,
+        client: PropTypes.object.isRequired,
+        children: PropTypes.node.isRequired,
     };
     ApolloProvider.childContextTypes = {
-        client: PropTypes$1.object.isRequired,
-        operations: PropTypes$1.object,
+        client: PropTypes.object.isRequired,
+        operations: PropTypes.object,
     };
     return ApolloProvider;
 }(React.Component));
@@ -392,21 +393,21 @@ var Query = (function (_super) {
         Object.assign(this.queryObservable, { lastError: lastError, lastResult: lastResult });
     };
     Query.contextTypes = {
-        client: PropTypes$1.object,
-        operations: PropTypes$1.object,
+        client: PropTypes.object,
+        operations: PropTypes.object,
     };
     Query.propTypes = {
-        client: PropTypes$1.object,
-        children: PropTypes$1.func.isRequired,
-        fetchPolicy: PropTypes$1.string,
-        notifyOnNetworkStatusChange: PropTypes$1.bool,
-        onCompleted: PropTypes$1.func,
-        onError: PropTypes$1.func,
-        pollInterval: PropTypes$1.number,
-        query: PropTypes$1.object.isRequired,
-        variables: PropTypes$1.object,
-        ssr: PropTypes$1.bool,
-        partialRefetch: PropTypes$1.bool,
+        client: PropTypes.object,
+        children: PropTypes.func.isRequired,
+        fetchPolicy: PropTypes.string,
+        notifyOnNetworkStatusChange: PropTypes.bool,
+        onCompleted: PropTypes.func,
+        onError: PropTypes.func,
+        pollInterval: PropTypes.number,
+        query: PropTypes.object.isRequired,
+        variables: PropTypes.object,
+        ssr: PropTypes.bool,
+        partialRefetch: PropTypes.bool,
     };
     return Query;
 }(React.Component));
@@ -571,22 +572,22 @@ var Mutation = (function (_super) {
         return children(this.runMutation, result);
     };
     Mutation.contextTypes = {
-        client: PropTypes$1.object.isRequired,
-        operations: PropTypes$1.object,
+        client: PropTypes.object.isRequired,
+        operations: PropTypes.object,
     };
     Mutation.propTypes = {
-        mutation: PropTypes$1.object.isRequired,
-        variables: PropTypes$1.object,
-        optimisticResponse: PropTypes$1.object,
-        refetchQueries: PropTypes$1.oneOfType([
-            PropTypes$1.arrayOf(PropTypes$1.oneOfType([PropTypes$1.string, PropTypes$1.object])),
-            PropTypes$1.func,
+        mutation: PropTypes.object.isRequired,
+        variables: PropTypes.object,
+        optimisticResponse: PropTypes.object,
+        refetchQueries: PropTypes.oneOfType([
+            PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])),
+            PropTypes.func,
         ]),
-        awaitRefetchQueries: PropTypes$1.bool,
-        update: PropTypes$1.func,
-        children: PropTypes$1.func.isRequired,
-        onCompleted: PropTypes$1.func,
-        onError: PropTypes$1.func,
+        awaitRefetchQueries: PropTypes.bool,
+        update: PropTypes.func,
+        children: PropTypes.func.isRequired,
+        onCompleted: PropTypes.func,
+        onError: PropTypes.func,
     };
     return Mutation;
 }(React.Component));
@@ -700,14 +701,14 @@ var Subscription = (function (_super) {
         return renderFn(result);
     };
     Subscription.contextTypes = {
-        client: PropTypes$1.object.isRequired,
+        client: PropTypes.object.isRequired,
     };
     Subscription.propTypes = {
-        subscription: PropTypes$1.object.isRequired,
-        variables: PropTypes$1.object,
-        children: PropTypes$1.func,
-        onSubscriptionData: PropTypes$1.func,
-        shouldResubscribe: PropTypes$1.oneOfType([PropTypes$1.func, PropTypes$1.bool]),
+        subscription: PropTypes.object.isRequired,
+        variables: PropTypes.object,
+        children: PropTypes.func,
+        onSubscriptionData: PropTypes.func,
+        shouldResubscribe: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
     };
     return Subscription;
 }(React.Component));
@@ -1016,7 +1017,7 @@ var ReactApolloCompose = function (_React$Component) {
 }(React__default.Component);
 
 ReactApolloCompose.propTypes = {
-    queries: PropTypes.object.isRequired
+    queries: PropTypes__default.object.isRequired
 };
 
 exports.composer = composer;

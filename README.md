@@ -2,7 +2,7 @@
 
 > react apollo composer for queries and mutations
 
-[![NPM](https://img.shields.io/npm/v/react-apollo-composer.svg)]
+![NPM](https://img.shields.io/npm/v/react-apollo-composer.svg)
 
 ## Install
 
