@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-apollo-compose
+npm install --save react-apollo-composer
 ```
 
 ## Usage
