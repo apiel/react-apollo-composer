@@ -1,4 +1,4 @@
-# react-apollo-compose
+# react-apollo-composer
 
 > react apollo composer for queries and mutations
 
